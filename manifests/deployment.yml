@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "dnazureaks1-37fc"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "dnazureaks1-37fc"
+  template:
+    metadata:
+      labels:
+        app: "dnazureaks1-37fc"
+    spec:
+      containers:
+        - name: "dnazureaks1-37fc"
+          image: "dnazureaks143.azurecr.io/dnazureaks1"
+          ports:
+          - containerPort: 80
