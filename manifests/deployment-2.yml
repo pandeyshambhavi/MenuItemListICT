@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "ictproject-87f8"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "ictproject-87f8"
+  template:
+    metadata:
+      labels:
+        app: "ictproject-87f8"
+    spec:
+      containers:
+        - name: "ictproject-87f8"
+          image: "azureict.azurecr.io/ictproject"
+          ports:
+          - containerPort: 80
